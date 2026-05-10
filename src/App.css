@@ -1,0 +1,680 @@
+
+/* سایدبار: روی بک‌دراپ */
+.sidebar {
+  width: 210px;
+  background-color: #FAFAFA;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  z-index: 2000; /* بالاتر از بک‌دراپ */
+}
+
+  .sidebar img{
+    margin-left: 0px !important;
+    top: 0px !important;
+  }
+
+.sidebar a{
+        color: #757575;
+        padding: 12px;
+    }
+
+.logBottom a{
+  padding-bottom: 8px;
+}
+
+.custom-side {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 0;
+  color: #555;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.custom-side .icon {
+  font-size: 18px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+/* وقتی هاور میشه */
+.custom-side:hover {
+  transform: translateY(-2px); /* کمی به سمت بالا بره */
+  font-size: 1.02rem;          /* کمی درشت‌تر بشه */
+  color: #555 !important; 
+}
+
+/* وقتی اکتیو (کلیک) میشه */
+.custom-side.active {
+  background-color: #2F8A80;   /* پس‌زمینه سبز */
+  color: #FAFAFA !important;
+  position: relative; /* لازمه برای ::before */
+}
+
+.custom-side.active::before {
+  content: "";
+  position: absolute;
+  left: -15px;   
+  top: 0;
+  height: 100%;
+  width: 4px;                
+  background-color: #145B55; 
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.logout-link {
+  color: #e74c3c !important; /* همیشه قرمز */
+}
+
+.logout-link:hover {
+  color: #e74c3c !important; /* هنگام هاور هم قرمز بمونه */
+}
+
+.custom-nav {
+  margin-right: 0px;
+  margin-left: 7px;
+}
+
+.menu{
+height: 90px;
+/* width: 100%; */
+/* width: 1050px; */
+position: sticky;
+top: 0;
+z-index: 900; 
+background-color: white;
+padding-left: 3px;
+}
+
+  .tablet{
+    display: none;
+  }
+
+.search{
+height: 52px;
+/* width: 100%; */
+/* top: 26px; */
+/* left: 32px; */
+border-radius: 48px;
+/* background-color: #FAFAFA; */
+color: #989898;
+}
+
+.inputsearch{
+  margin-left: 18px;
+}
+
+.profile{
+  /* width: 221px; */
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.stat-card, .right{
+  margin-top: 0px;
+}
+
+.bell-wrapper {
+ display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  position: relative;
+  margin-right: 10px;
+}
+
+.bell-wrapper .me-2 {
+  margin-right: 0 !important; /* از !important استفاده کن اگه لازمه */
+}
+
+/* کادر دور + radius بیشتر */
+/* کادر دور تقویم */
+.calendar-wrapper {
+  /* padding: 4px;  */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  background: #fff;
+  border: 0.1px solid rgba(0, 0, 0, 0.01);
+  /* border-radius: 20px; */
+  flex: 1 1 auto;
+}
+
+.calendar-wrapper.card {
+  width: 100%;
+  /* max-width: 100%; */
+  min-width: 0;
+  padding: 0 !important; /* مهم */
+}
+
+
+/* روی خود تقویم هم radius اعمال بشه */
+.react-calendar {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  border: none !important;
+  border-radius: 20px !important;
+  overflow: hidden; 
+  flex-shrink: 1 !important;
+}
+
+.calendar-wrapper .react-calendar {
+  /* border-radius: 50px !important; */
+  border: none !important;
+  overflow: hidden !important;
+}
+
+
+/* دکمه‌های ناوبری */
+.react-calendar__navigation button:disabled {
+  color: #999 !important;
+}
+.react-calendar__navigation button {
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+/* فلش تغییر ماه */
+.react-calendar__navigation button.react-calendar__navigation__prev-button,
+.react-calendar__navigation button.react-calendar__navigation__next-button {
+  color: #145B55 !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* فلش تغییر سال (دوتایی) */
+.react-calendar__navigation button.react-calendar__navigation__prev2-button,
+.react-calendar__navigation button.react-calendar__navigation__next2-button {
+  color: #145B55 !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* فقط یک حرف روزها */
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.react-calendar__tile {
+  aspect-ratio: 1.5 !important; /* مربع همیشه */
+  padding: 0 !important;
+  margin: 0;
+}
+
+
+/* فاصله بیشتر بین روزها */
+/* .react-calendar__month-view__days__day {
+  padding: 0 !important;
+  margin: 0px;
+} */
+
+
+/* روز امروز */
+.react-calendar__tile--now {
+  background: none !important;
+  position: relative;
+}
+
+
+.react-calendar__tile--now::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 52%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #145B55;
+  border-radius: 50%;
+}
+
+/* روز انتخاب‌شده */
+.react-calendar__tile--active {
+  background: rgba(46, 196, 182, 0.15) !important;
+  color: #145B55 !important;
+  border-radius: 50%;
+}
+
+/* دایره‌های ایونت */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  gap: 1px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.dot.appointment { background: #2ec4b6; }
+.dot.meeting { background: #ffb703; }
+.dot.surgery { background: #e63946; }
+
+/* ✅ legend زیر تقویم */
+.legend {
+  font-size: 14px;
+  color: #555;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+.legend-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.legend-dot.appointment { background: #145B55; }
+.legend-dot.meeting { background: #ffb703; }
+.legend-dot.surgery { background: #e63946; }
+
+
+.scrollable-list::-webkit-scrollbar {
+  width: 4px; /* باریک */
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* پس‌زمینه روشن */
+  border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background: #2f897f; /* رنگ سبز هماهنگ */
+  border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+  background: #256c63; /* رنگ کمی تیره‌تر در هاور */
+}
+
+
+/* خطوط جدول خیلی نازک و کم‌رنگ */
+.custom-table th,
+.custom-table td {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  padding: 10px;
+}
+
+.custom-table th {
+  vertical-align: top; 
+}
+
+/* سربرگ کم‌رنگ */
+.custom-table thead th {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  color: #555;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* صفحه‌بندی */
+.custom-pagination .page-link {
+  color: #6c757d;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  /* padding: 5px 10px; */
+  border-radius: 6px;
+  margin: 0 3px;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #2F897F;
+  border-color: #2F897F;
+  color: #fff;
+}
+
+.custom-pagination .page-link:hover {
+  background-color: #f1f1f1;
+}
+
+.desktop-searchbar {
+    display: block !important; /* نمایش در دسکتاپ */
+  }
+
+.search-icon-mobile-tablet {
+  display: none;
+}
+
+.dashboard-desktop {
+  display: block;
+}
+
+/* موبایل */
+.dashboard-mobile {
+  display: none;
+}
+
+/* .logBottom{
+    margin-bottom: -15px !important;
+  }
+   */
+/* *******************************************Tablet************************************************ */
+@media (min-width: 800px) and (max-width: 1024px) {
+
+
+   html, body {
+        font-size: 15px !important;
+      }
+
+
+  .sidebar {
+    transform: translateX(-100%);
+    /* height: 90vh;
+    top: 14vh; */
+  }
+
+  /* .sidebar .logo{
+    margin: 0 !important;
+  } */
+
+  
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000; /* کمترین مقدار بین این سه */
+}
+
+  .sidebar img{
+    margin-left: 58px !important;
+    top: 0px !important;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* .sidebar .nav{
+    margin-top: 10px;
+  } */
+
+  .custom-nav {
+    margin-bottom: 0 !important;
+    
+  }
+
+  /* .logBottom{
+    margin-bottom: -15px !important;
+  } */
+
+  .navbardiv{
+    width: 100%;
+    left: 210px !important;
+    right: 300px !important;
+  }
+
+/* دکمه همبرگری: همیشه بالاتر از همه */
+.hamburger-btn {
+  position: fixed;
+  top: 21px;
+  left: 15px;
+  background-color: #f6f6f6;
+  border: 1px solid white;
+  color: #656565;
+  padding: 9px 10px;
+  border-radius: 6px;
+  z-index: 3000; /* بالاتر از منو و بک‌دراپ */
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.15); */
+  cursor: pointer;
+  }
+
+  .profile{
+    margin-right: 0;
+  }
+
+  .search{
+height: 47px;
+}
+
+.menu{
+  /* background-color: #FAFAFA; */
+  /* width: 100%; */
+  margin-right: 175px;
+  padding-right: 50px !important;
+  left: 0 !important;
+}
+
+.menu.active{
+  background-color: #FAFAFA;
+}
+
+.profile.active{
+  background-color: #FAFAFA;
+}
+
+.inputsearch input{
+  background-color: #f4f4f4 !important;
+}
+
+.sidebar .logo { 
+  margin-top: 10px !important;
+}
+
+.logoHamClose{
+  margin-left: 70px;
+}
+
+    .main-content{
+    margin-left: 0px !important;
+  }
+}
+
+/* ***************************************Mobile***************************************************** */
+@media (max-width: 800px) {
+
+ html, body {
+        font-size: 14px !important;
+      }
+
+  .tablet{
+    display: none;
+  }
+
+  .sidebar .logo{
+    display: none;
+  }
+
+   .nav {
+    display: none !important;
+  }
+
+  .search{
+    height: 47px;
+  }
+
+.bottom-nav-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  display: flex; /* اطمینان از اینکه آیتم‌ها به درستی چیده می‌شوند */
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px; /* کمی فاصله داخلی */
+}
+
+.bottom-nav-mobile .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease; /* انیمیشن برای تغییر رنگ */
+  color: #6c757d; /* رنگ پیش‌فرض (غیرفعال) */
+  font-size: 20px; /* اندازه پیش‌فرض آیکون */
+  flex-grow: 1; /* برای اینکه همه آیتم‌ها فضای مساوی بگیرند */
+  text-align: center;
+}
+
+.bottom-nav-mobile .nav-item svg {
+  margin-bottom: 4px;
+  font-size: 20px;
+  color: inherit !important;
+  fill: currentColor !important;
+  transition: color 0.2s ease, transform 0.2s ease; /* transition برای رنگ و transform */
+  transform-origin: center;
+}
+
+/* اگر خواستی آیکون فعال بزرگتر شود */
+.bottom-nav-mobile .nav-item.active svg {
+  transform: scale(1.05);
+}
+
+/* رنگ فعال */
+.bottom-nav-mobile .nav-item.active {
+  color: #2F897F; /* سبز */
+}
+
+/* رنگ هاور */
+.bottom-nav-mobile .nav-item:not(.active):hover {
+  color: #4CAF50; /* رنگ سبز روشن‌تر برای هاور (می‌توانید این مقدار را تنظیم کنید) */
+}
+
+
+/* استایل برای آیکون خانه اگر نیاز به اندازه متفاوت دارد */
+.bottom-nav-mobile .home-icon {
+  font-size: 24px; /* کمی بزرگتر */
+}
+
+
+/* .bottom-nav-mobile .home-icon {
+  font-size: 30px;
+  color: #007bff;
+} */
+
+.navbar-mobile {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1500;
+  border-bottom: 1px solid #eee;
+}
+
+ .dashboard-desktop {
+    display: none !important;
+  }
+
+  .dashboard-mobile {
+    display: block;
+  }
+
+  .st{
+    padding: 8px 12px !important;
+  }
+
+.inputsearch{
+  margin-left: 0px;
+}
+  
+}
+
+@media (min-width: 1025px) and (max-width: 1150px) {
+
+  .rightColumn{
+    width: 28% !important;
+  }
+
+.main-content{
+  min-width: 525px !important;
+  margin-right: 320px !important;
+  /* padding-right: 20px !important; */
+}
+
+}
+
+@media (min-width: 1025px) and (max-width: 1140px) {
+  .main-content{
+  margin-right: 318px !important;
+  /* padding-right: 20px !important; */
+}
+
+}
+
+@media (min-width: 1030px) and (max-width: 1130px) {
+  .main-content{
+  margin-right: 308px !important;
+  /* padding-right: 20px !important; */
+}
+
+}
+
+@media (min-width: 1030px) and (max-width: 1068px) {
+  .main-content{
+  margin-right: 290px !important;
+  /* padding-right: 20px !important; */
+}
+
+}
+
+@media (min-width: 700px) and (max-width: 960px) {
+  .rightColumn{
+    width: 35% !important;
+  }
+  .main-content{
+  margin-right: 320px !important;
+  /* padding-right: 20px !important; */
+}
+}
+
+@media (min-width: 800px) and (max-width: 910px) {
+
+  .main-content{
+  margin-right: 300px !important;
+  /* padding-right: 20px !important; */
+}
+}
+
+@media (min-width: 800px) and (max-width: 860px) {
+
+  .main-content{
+  margin-right: 290px !important;
+  /* padding-right: 20px !important; */
+}
+}
+
+@media (min-width: 800px) and (max-width: 840px) {
+
+  .main-content{
+  margin-right: 280px !important;
+  /* padding-right: 20px !important; */
+}
+}
+
+@media (min-width: 870px) and (max-width: 910px) {
+
+  .main-content{
+  margin-right: 310px !important;
+  /* padding-right: 20px !important; */
+}
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+
+  .inputsearch{
+    width: 100% !important;
+  }
+}
