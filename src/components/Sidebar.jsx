@@ -36,7 +36,11 @@ function Sidebar({ isOpen, onToggleMenu }) {
         <FaBars size={22} />
       </button>
         <div className="logoHamClose text-center mb-5 mt-4">
-          <img src="/HealthHub.png" alt="HealthHub" width="140" />
+          <img
+  src={`${import.meta.env.BASE_URL}HealthHub.png`}
+  alt="HealthHub"
+  width="140"
+/>
         </div>
 
       {isOpen && <div className="sidebar-backdrop" onClick={() => onToggleMenu(false)} />}

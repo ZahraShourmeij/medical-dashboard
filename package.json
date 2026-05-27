@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://ZahraShourmeij.github.io/medical-dashboard",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "gh-pages --dotfiles --dist dist -b gh-pages"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.0",
