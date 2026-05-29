@@ -84,7 +84,7 @@ function Chart() {
   };
 
   return (
-    <div className="stat-card mt-0" style={{ position: "relative" }}> {/* position: relative برای والد */}
+    <div className="stat-card mt-3" style={{ position: "relative" }}> {/* position: relative برای والد */}
       <div className="d-flex align-items-center mb-2">
         <div
           style={{

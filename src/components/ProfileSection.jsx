@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaBell } from "react-icons/fa";
 import avatarImg from "../assets/profile.png";
 import { FaSearch } from "react-icons/fa";
+import Notification from "../assets/icons/notification.svg";
 
 function ProfileSection({ isSidebarOpen }) {
   const [user] = useState({
@@ -18,7 +18,7 @@ function ProfileSection({ isSidebarOpen }) {
 
       {/* Bell Icon */}
     <div className="bell-wrapper">
-      <FaBell className="bell me-2" size={20} />
+      <img src={Notification} alt="" className="menu-icon bell me-2"/>
     </div>
 
       {/* Divider */}

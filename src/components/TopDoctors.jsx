@@ -15,7 +15,7 @@ function TopDoctors() {
 
 
   return (
-    <div className="doctor p-3 bg-white rounded shadow-sm mt-4">
+    <div className="doctor p-3 bg-white rounded shadow-sm mt-2">
       <div className="d-flex align-items-center mb-3">
         <div
           style={{
@@ -52,7 +52,7 @@ function TopDoctors() {
               }}
             />
             <div className="flex-grow-1">
-              <div className="fw-semibold">{doc.name}</div>
+              <div className="">{doc.name}</div>
               <small className="text-muted">{doc.specialty}</small>
             </div>
             <div className="p-2">

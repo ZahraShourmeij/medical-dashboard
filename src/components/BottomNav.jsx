@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { BsCalendarFill, BsPersonBadgeFill, BsHouseDoorFill, BsStickyFill, BsFileTextFill } from "react-icons/bs";
-
+import Calendar from "../assets/icons/Calendar.svg";
+import Appointment from "../assets/icons/Appointment.svg";
+import Dashboard from "../assets/icons/Dashboard.svg";
+import Notes from "../assets/icons/Notes.svg";
+import Prescriptions from "../assets/icons/Prescriptions.svg";
 
 export default function BottomNav() {
   const [activeNav, setActiveNav] = useState('home'); // 'home' به عنوان مقدار پیش‌فرض فعال
 
   const navItems = [
-    { id: 'calendar', icon: <BsCalendarFill />, label: 'تقویم' },
-    { id: 'profile', icon: <BsPersonBadgeFill />, label: 'پروفایل' },
-    { id: 'home', icon: <BsHouseDoorFill className="home-icon" />, label: 'خانه' },
-    { id: 'sticky', icon: <BsStickyFill />, label: 'یادداشت' },
-    { id: 'docs', icon: <BsFileTextFill />, label: 'اسناد' },
+    { id: 'calendar', icon: <img src = {Calendar} alt="" className="menu-icon"/>, label: 'تقویم' },
+    { id: 'profile', icon: <img src = {Appointment} alt="" className="menu-icon"/>, label: 'پروفایل' },
+    { id: 'home', icon: <img src = {Dashboard} alt="" className="home-icon"/>, label: 'خانه' },
+    { id: 'sticky', icon: <img src = {Notes} alt="" className="menu-icon"/>, label: 'یادداشت' },
+    { id: 'docs', icon: <img src = {Prescriptions} alt="" className="menu-icon"/>, label: 'اسناد' },
   ];
 
   return (

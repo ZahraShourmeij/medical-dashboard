@@ -1,3 +1,6 @@
+body{
+  font-family: "Poppins", sans-serif !important;
+}
 
 /* سایدبار: روی بک‌دراپ */
 .sidebar {
@@ -14,6 +17,16 @@
   .sidebar img{
     margin-left: 0px !important;
     top: 0px !important;
+  }
+
+  .menu-icon{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+}
+
+    .sidebar .logo{
+    margin-bottom: 120px !important;
   }
 
 .sidebar a{
@@ -105,6 +118,14 @@ height: 52px;
 border-radius: 48px;
 /* background-color: #FAFAFA; */
 color: #989898;
+transition: all 0.2s ease;
+}
+
+
+.search:focus {
+  outline: none !important;
+  border: 1px solid #145B55 !important;
+  box-shadow: 0 0 8px rgba(47, 137, 127, 0.2) !important;
 }
 
 .inputsearch{
@@ -126,7 +147,8 @@ color: #989898;
  display: inline-flex;
   align-items: center; 
   justify-content: center;
-  background-color: #f6f6f6;
+  background-color: #fff;
+  border: 2px solid #f6f6f6;
   border-radius: 50%; 
   width: 40px; 
   height: 40px; 
@@ -136,6 +158,10 @@ color: #989898;
 
 .bell-wrapper .me-2 {
   margin-right: 0 !important; /* از !important استفاده کن اگه لازمه */
+}
+
+.name{
+  font-size: 15px;
 }
 
 /* کادر دور + radius بیشتر */
@@ -207,7 +233,7 @@ color: #989898;
 /* فقط یک حرف روزها */
 .react-calendar__month-view__weekdays__weekday abbr {
   text-decoration: none !important;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
 }
 
@@ -270,7 +296,7 @@ color: #989898;
 
 /* ✅ legend زیر تقویم */
 .legend {
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
   gap: 12px;
   padding-bottom: 10px;
@@ -557,7 +583,9 @@ height: 47px;
 
 /* استایل برای آیکون خانه اگر نیاز به اندازه متفاوت دارد */
 .bottom-nav-mobile .home-icon {
-  font-size: 24px; /* کمی بزرگتر */
+  font-size: 14px; /* کمی بزرگتر */
+  background-color:#8f8787;
+;
 }
 
 

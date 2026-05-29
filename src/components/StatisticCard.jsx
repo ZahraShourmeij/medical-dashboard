@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {
-  FaDownload,
-  FaCalendarAlt,
-  FaUserInjured,
-  FaCalendarCheck,
-  FaDollarSign,
-  FaArrowUp,
-} from "react-icons/fa";
+import Export from "../assets/icons/export.svg";
+import Calendar from "../assets/icons/date.svg";
+import UserInjured from "../assets/icons/UserInjured.svg";
+import CalendarCheck from "../assets/icons/CalendarCheck.svg";
+import DollarSign from "../assets/icons/DollarSign.svg";
+import GrowUp from "../assets/icons/GrowUp.svg";
+import {FaArrowUp} from "react-icons/fa";
 
 function Statistic() {
   const [stats, setStats] = useState([]);
@@ -20,18 +19,21 @@ function Statistic() {
   }, []);
 
   // تابع برای مپ کردن اسم آیکون‌ها از API به React-Icons
-  const renderIcon = (iconName) => {
-    switch (iconName) {
-      case "user":
-        return <FaUserInjured size={26} />;
-      case "calendar":
-        return <FaCalendarCheck size={26} />;
-      case "dollar":
-        return <FaDollarSign size={26} />;
-      default:
-        return <FaUserInjured size={26} />;
-    }
-  };
+const renderIcon = (iconName) => {
+  switch (iconName) {
+    case "user":
+      return <img src={UserInjured} alt="" className="stat-icon" />;
+
+    case "calendar":
+      return <img src={CalendarCheck} alt="" className="stat-icon" />;
+
+    case "dollar":
+      return <img src={DollarSign} alt="" className="stat-icon" />;
+
+    default:
+      return <img src={UserInjured} alt="" className="stat-icon" />;
+  }
+};
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "short",
@@ -69,7 +71,7 @@ function Statistic() {
             gap: "8px",
           }}
         >
-          <FaDownload className="text-white" />
+          <img src={Export} alt="" className="menu-icon" />
           Export
         </button>
       </div>
@@ -84,7 +86,7 @@ function Statistic() {
           gap: "6px",
         }}
       >
-        <FaCalendarAlt style={{ fontSize: "14px" }} />
+        <img src={Calendar} alt="" className="date-icon" />
         {today}
       </p>
 
@@ -95,13 +97,14 @@ function Statistic() {
               <div className="card-body">
                 <div className="mb-3">{renderIcon(stat.icon)}</div>
                 <h6 className="mb-3 text-secondary">{stat.title}</h6>
-                <h5 className="mt-2 mb-3 text-dark fw-bold">{stat.value}</h5>
+                <h5 className="mt-2 pb-1 text-dark fw-bold">{stat.value}</h5>
                 <span
                   className="badge text-secondary d-flex"
                   style={{ gap: "4px" }}
                 >
-                  <FaArrowUp style={{ fontSize: "0.8em" }} />
+                  <img src={GrowUp} alt="" className="menu-icon ps-0 pe-1 pb-1" />
                   {stat.change}
+                  <FaArrowUp style={{ fontSize: "0.8em" }} />
                 </span>
               </div>
             </div>

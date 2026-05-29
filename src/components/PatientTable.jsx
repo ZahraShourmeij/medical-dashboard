@@ -28,7 +28,7 @@ export default function AllPatientsTable() {
   const totalPages = Math.ceil(patients.length / rowsPerPage);
 
   return (
-    <div className="bg-white rounded shadow-sm mt-3">
+    <div className="bg-white rounded shadow-sm mt-4">
       {/* عنوان */}
       <div className="d-flex align-items-center mb-2">
         <div

@@ -46,7 +46,7 @@ const Dashboard = () => {
     width: "100%",
     flexShrink: 1,
     bottom: 0,
-    overflowY: "auto",
+    // overflowY: "auto",
     paddingRight: "10px",
     zIndex: 999,
   }}>
