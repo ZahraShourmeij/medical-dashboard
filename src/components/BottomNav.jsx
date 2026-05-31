@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from "../assets/icons/Calendar.svg";
 import Appointment from "../assets/icons/Appointment.svg";
-import Dashboard from "../assets/icons/Dashboard.svg";
+import Dashboard from "../assets/icons/DashboardMobile.svg";
 import Notes from "../assets/icons/Notes.svg";
 import Prescriptions from "../assets/icons/Prescriptions.svg";
 
@@ -11,7 +11,7 @@ export default function BottomNav() {
   const navItems = [
     { id: 'calendar', icon: <img src = {Calendar} alt="" className="menu-icon"/>, label: 'تقویم' },
     { id: 'profile', icon: <img src = {Appointment} alt="" className="menu-icon"/>, label: 'پروفایل' },
-    { id: 'home', icon: <img src = {Dashboard} alt="" className="home-icon"/>, label: 'خانه' },
+    { id: 'home', icon: <img src = {Dashboard} alt="" className="home-icon menu-icon"/>, label: 'خانه' },
     { id: 'sticky', icon: <img src = {Notes} alt="" className="menu-icon"/>, label: 'یادداشت' },
     { id: 'docs', icon: <img src = {Prescriptions} alt="" className="menu-icon"/>, label: 'اسناد' },
   ];

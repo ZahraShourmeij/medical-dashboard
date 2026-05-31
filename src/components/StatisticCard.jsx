@@ -52,6 +52,7 @@ const renderIcon = (iconName) => {
             backgroundColor: "#2F897F",
             borderRadius: "2px",
             marginRight: "12px",
+            marginTop: "-8px"
           }}
         ></div>
         <h5 className="st">Statistic</h5>
@@ -86,8 +87,10 @@ const renderIcon = (iconName) => {
           gap: "6px",
         }}
       >
-        <img src={Calendar} alt="" className="date-icon" />
-        {today}
+        <span className="dailyDate">
+        <img src={Calendar} alt="" className="date-icon pe-2" />
+        {today} 
+        </span>
       </p>
 
       <div className="row">
@@ -100,11 +103,13 @@ const renderIcon = (iconName) => {
                 <h5 className="mt-2 pb-1 text-dark fw-bold">{stat.value}</h5>
                 <span
                   className="badge text-secondary d-flex"
-                  style={{ gap: "4px" }}
+                  style={{ gap: "6px" }}
                 >
-                  <img src={GrowUp} alt="" className="menu-icon ps-0 pe-1 pb-1" />
-                  {stat.change}
-                  <FaArrowUp style={{ fontSize: "0.8em" }} />
+                  <img src={GrowUp} alt="" className="menu-icon growUp" />
+                  <span style={{ marginTop: "5px"}}>
+                      {stat.change}
+                  </span>
+                  <FaArrowUp style={{ fontSize: "0.8em", marginTop:"5px" }} />
                 </span>
               </div>
             </div>

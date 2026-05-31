@@ -13,7 +13,7 @@ function Sidebar({ isOpen, onToggleMenu }) {
   const [active, setActive] = useState("Dashboard");
 
   const menuItems = [
-    { name: "Dashboard", icon: <img src = {Dashboard} alt="" className="menu-icon"/> },
+    { name: "Dashboard", icon: <img src = {Dashboard} alt="" className="menu-icon dashboard"/> },
     { name: "Appointment", icon: <img src = {Appointment} alt="" className="menu-icon"/> },
     { name: "Calendar", icon: <img src = {Calendar} alt="" className="menu-icon"/> },
     { name: "Messages", icon: <img src = {Messages} alt="" className="menu-icon"/> },
@@ -58,7 +58,7 @@ function Sidebar({ isOpen, onToggleMenu }) {
   />
 </div>
 
-        <nav className=" nav flex-column flex-grow-1">
+        <nav className="nav flex-column flex-grow-1">
           {menuItems.map((item) => (
             <a
               key={item.name}

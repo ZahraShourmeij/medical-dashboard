@@ -9,7 +9,11 @@ const [user] = useState({
 
   return (
     <div className="navbar-mobile d-flex justify-content-between align-items-center px-3 py-3">
-      <img src="/HealthHub.png" alt="HealthHub" width="120" />
+        <img
+    src={`${import.meta.env.BASE_URL}HealthHub.png`}
+    alt="HealthHub"
+    width="120"
+  />
       <div className="d-flex align-items-center">
         {user.avatar && (
           <img
