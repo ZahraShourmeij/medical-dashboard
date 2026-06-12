@@ -55,7 +55,8 @@ This project was developed to strengthen skills in:
 
 ## 📸 Screenshots
 
-Add screenshots of the dashboard here.
+### Home Page
+![Home](./screenshots/home.png)
 
 ## 🔧 Installation
 
