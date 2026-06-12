@@ -61,7 +61,7 @@ This project was developed to strengthen skills in:
 ## 🔧 Installation
 
 ```bash
-git clone https://github.com/your-username/medical-dashboard.git
+git clone https://github.com/ZahraShourmeij/medical-dashboard.git
 
 cd medical-dashboard
 
